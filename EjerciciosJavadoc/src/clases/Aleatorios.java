@@ -3,14 +3,15 @@ package clases;
 import java.util.Random;
 
 /**
- * Clases con funciones para generar números aleatorios
+ * Clases con funciones para generar números aleatorios.
  */
 public class Aleatorios {
 
 	/**
 	 * Esta función generá un número aleatorio las veces que le indique el usuario.
 	 * 
-	 * @param cantidad Número que introducirá el usuario para genrar tantos números aleatorios como desee.
+	 * @param cantidad Número que introducirá el usuario para generar tantos números
+	 *                 aleatorios como desee.
 	 */
 	public static void numerosAletorios(int cantidad) {
 		double aleatorio;
@@ -26,8 +27,9 @@ public class Aleatorios {
 	 * pero con la diferencia de que el número generado no puede ser mayor que el
 	 * maximo introducido.
 	 * 
-	 * @param cantidad Número que introducirá el usuario para genrar tantos números aleatorios como desee.
-	 * @param max Cantidad introducida por el usuario para establecer el maximo de veces que se puede generar un número.
+	 * @param cantidad Número que introducirá el usuario para generar tantos números
+	 *                 aleatorios como desee.
+	 * @param max      Cantidad máxima que puede tomar un número aleatorio.
 	 */
 	public static void numerosAleatorios(int cantidad, int max) {
 		int aleatorio;
@@ -41,10 +43,12 @@ public class Aleatorios {
 	/**
 	 * Esta función tambien genera un número las veces que le introduzca el usuario,
 	 * pero con la diferencia de que el número generado no puede ser mayor que el
-	 * maximo introducido ni menor que el valor introducido
-	 * @param cantidad
-	 * @param minimo
-	 * @param maximo
+	 * maximo introducido ni menor que el valor introducido.
+	 * 
+	 * @param cantidad Número que introducirá el usuario para generar tantos números
+	 *                 aleatorios como desee.
+	 * @param minimo   Cantidad máxima que puede tomar un número aleatorio.
+	 * @param maximo   Cantidad mínima que puede tomar un número aleatorio.
 	 */
 	public static void numerosAleatorios(int cantidad, int minimo, int maximo) {
 		int aleatorio;

@@ -2,23 +2,50 @@ package clases;
 
 import java.util.Random;
 
+/**
+ * La clase tesoro simula un juego donde el usuario (jugador) busca un tesoro en
+ * un tablero.
+ */
 public class Tesoro {
+
+	/**
+	 * Se especifica el tamaño del tablero.
+	 */
 	public static final int TAM_TABLERO = 5;
 
+	/**
+	 * Coordenada X donde se encuentra el tesoro en el tablero.
+	 */
 	static int xTesoro;
 
+	/**
+	 * Coordenada Y donde se encuentra el tesoro en el tablero.
+	 */
 	static int yTesoro;
 
+	/**
+	 * Coordenada X donde se encuentra el jugador en el tablero.
+	 */
 	int xJugador = 1;
 
+	/**
+	 * Coordenada Y donde se encuentra el jugador en el tablero.
+	 */
 	int yJugador = 1;
 
+	/**
+	 * Esta función genera una posición aleatoria para el tesoro en el tablero.
+	 */
 	static void generaPosicionTesoro() {
 		Random rand = new Random();
 		xTesoro = rand.nextInt(1, TAM_TABLERO + 1);
 		yTesoro = rand.nextInt(1, TAM_TABLERO + 1);
 	}
 
+	/**
+	 * Esta función se encarga de imprimir el tablero con la posición predeterminada
+	 * del jugador.
+	 */
 	void pintaTablero() {
 		// Imprimimos la primera línea de números
 		for (int i = 1; i <= TAM_TABLERO; i++) {
@@ -46,6 +73,15 @@ public class Tesoro {
 		}
 	}
 
+	/**
+	 * Esta función nos permite mover al jugador en el tablero mediante el comando
+	 * espeficicado por el jugador.
+	 * 
+	 * @param movimiento Los comandos de movimiento son los siguientes (arriba,
+	 *                   abajo, izquierda y derecha).
+	 * @return 0 si el movimiento esta bien, -1 si esta fuera del tablero y -2 si el
+	 *         comando no es reconocido.
+	 */
 	int mueveJugador(String movimiento) {
 		int res = 0;
 		String movMinuscula = movimiento.toLowerCase();
@@ -82,14 +118,20 @@ public class Tesoro {
 		default:
 			res = -2;
 			break;
-		}		
-		
+		}
+
 		return res;
 	}
 
-	boolean buscaTesoro(){
+	/**
+	 * Esta función comprueba si el jugador ha encontrado el tesoro.
+	 * 
+	 * @return Devuelve "true" si el jugador ha encontrado el tesoro, "false" si no
+	 *         lo ha encontrado.
+	 */
+	boolean buscaTesoro() {
 		boolean res = false;
-		if(xTesoro == xJugador && yTesoro == yJugador) {
+		if (xTesoro == xJugador && yTesoro == yJugador) {
 			res = true;
 		}
 		return res;
